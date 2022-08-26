@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+import { FormSubmission, Home } from "./Pages";
+import "./App.css";
+
+const LOCAL_STORAGE_KEY = "peserta";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   const [state, setState] = useState([]);
+
+   const addPeserta = (peserta) => {
+      setState([peserta, ...state]);
+   };
+
+   useEffect(() => {
+      const daftarPeserta = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+      if (daftarPeserta) {
+         setState(daftarPeserta);
+      }
+   }, []);
+
+   useEffect(() => {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state));
+   }, [state]);
+
+   return (
+      <div className="App">
+         <Routes>
+            <Route path="/" element={<Home addPeserta={addPeserta} />} />
+            <Route
+               path="/form"
+               element={<FormSubmission setPeserta={setState} />}
+            />
+         </Routes>
+      </div>
+   );
 }
 
 export default App;

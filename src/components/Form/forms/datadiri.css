@@ -1,0 +1,11 @@
+.input-data {
+   display: flex;
+}
+.input-data > .data-left,
+.data-right {
+   flex: 1;
+   padding: 0 40px;
+}
+.MuiTextField-root {
+   margin-bottom: 20px !important;
+}
