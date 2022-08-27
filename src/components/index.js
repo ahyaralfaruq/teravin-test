@@ -1,4 +1,4 @@
-import Form from "./Form";
+import { DataDiri, RiwayatPendidikan, PengalamanKerja, Keahlian } from "./Form";
 import Table from "./Table";
 
-export { Form, Table };
+export { DataDiri, RiwayatPendidikan, PengalamanKerja, Keahlian, Table };

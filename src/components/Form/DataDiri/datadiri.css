@@ -1,5 +1,6 @@
 .input-data {
    display: flex;
+   margin-bottom: 40px;
 }
 .input-data > .data-left,
 .data-right {
@@ -8,4 +9,8 @@
 }
 .MuiTextField-root {
    margin-bottom: 20px !important;
+}
+.button-wrapper {
+   text-align: right;
+   padding-right: 40px;
 }

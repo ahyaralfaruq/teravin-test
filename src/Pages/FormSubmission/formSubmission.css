@@ -2,9 +2,8 @@
    padding: 40px 0;
 }
 .form > .input-wrapper {
-   display: flex;
+   padding: 40px 0;
 }
-.form > .button-wrapper {
-   text-align: right;
+.MuiStepper-root {
    padding-top: 40px;
 }
