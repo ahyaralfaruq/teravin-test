@@ -1,6 +1,6 @@
 import React from "react";
 
-const Index = () => {
+const RiwayatPendidikan = () => {
    return (
       <div>
          <div>riwayat pendidikan</div>
@@ -8,4 +8,4 @@ const Index = () => {
    );
 };
 
-export default Index;
+export default RiwayatPendidikan;

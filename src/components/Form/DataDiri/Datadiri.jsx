@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TextField, Button } from "@mui/material";
 import "./datadiri.css";
 
-const Index = ({ activeStep, setActiveStep, setPersonal }) => {
+const Datadiri = ({ activeStep, setActiveStep, setPersonal }) => {
    const [postData, setPostData] = useState({
       nama: "",
       alamat: "",
@@ -193,4 +193,4 @@ const Index = ({ activeStep, setActiveStep, setPersonal }) => {
    );
 };
 
-export default Index;
+export default Datadiri;
